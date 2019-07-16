@@ -11,18 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('posts','PostController@index');
+Route::get('/', 'PostController@index');
 
 Route::get('category','CategoryController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('admin',function (){
-    return view('admin.dashboard');
-});
+Route::prefix('/admin')
+    ->name('admin.')
+    ->namespace('Admin')
+    ->middleware('auth')
+    ->group(function(){
+        Route::get('/posts','PostsController@index')->name('posts');
+    });

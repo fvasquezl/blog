@@ -25,6 +25,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "admin-lte": "3.0.0-beta.1"
+        "admin-lte": "3.0.0-beta.1",
+        "icheck-bootstrap": "^3.0.1"
     }
 }
