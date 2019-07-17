@@ -11,16 +11,19 @@
 |
 */
 
+
 Route::get('/', 'PostController@index');
 
 Route::get('category','CategoryController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 Route::prefix('/admin')
-    ->name('admin.')
     ->namespace('Admin')
     ->middleware('auth')
     ->group(function(){
-        Route::get('/posts','PostsController@index')->name('posts');
+        Route::get('/', 'AdminController@index')->name('admin');
+        Route::get('/posts','PostsController@index')->name('admin.posts.index');
     });
+
+Route::auth();

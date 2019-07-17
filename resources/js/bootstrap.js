@@ -22,6 +22,8 @@ try {
  */
 
 require('admin-lte/plugins/bootstrap/js/bootstrap.bundle.min');
+require('admin-lte/plugins/datatables/jquery.dataTables.js');
+require('admin-lte/plugins/datatables/dataTables.bootstrap4.js');
 require('admin-lte/plugins/fastclick/fastclick');
 require('admin-lte/dist/js/demo');
 
