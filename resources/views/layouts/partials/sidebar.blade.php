@@ -19,8 +19,8 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview {{request()->is('admin/posts')? "menu-open" : ''}}">
-                    <a href="#" class="nav-link {{request()->is('admin/posts')? "active" : ''}}">
+                <li class="nav-item has-treeview {{request()->is('admin/posts*')? "menu-open" : ''}}">
+                    <a href="#" class="nav-link {{request()->is('admin/posts*')? "active" : ''}}">
                         <i class="nav-icon fas  fa-edit"></i>
                         <p>
                             Blog
@@ -35,7 +35,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('admin.posts.create')}}" class="nav-link {{request()->is('admin/posts/create')? "active" : ''}}">
                                 <i class="fas fa-pencil-alt nav-icon"></i>
                                 <p>Create Post</p>
                             </a>

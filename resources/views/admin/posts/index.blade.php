@@ -7,9 +7,8 @@
         </div>
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">admin</a></li>
-                <li class="breadcrumb-item active">posts</li>
+                <li class="breadcrumb-item"><i class="nav-icon fas fa-tachometer-alt"></i> <a href="{{route('admin')}}"> Admin</a></li>
+                <li class="breadcrumb-item active"><i class="fas fa-eye nav-icon"></i> Posts</li>
             </ol>
         </div>
     </div>
